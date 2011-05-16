@@ -12,6 +12,9 @@
 #import "Cell.h"
 
 #define NUM_INIT 70 // temp value, can change later
+#define INFECTED_INIT 3 // temp, can add for different levels etc...
+#define X_DIM   480
+#define Y_DIM   320
 
 
 @interface TC_Game : NSObject {
@@ -24,7 +27,7 @@
 }
 
 @property (nonatomic, retain) NSMutableArray *cells;
-@property (nonatomic) int infected;
-@ property (nonatomic) int num_remaining;
+@property (nonatomic) int num_infected;
+@property (nonatomic) int num_remaining;
 
 @end

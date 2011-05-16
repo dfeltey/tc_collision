@@ -10,6 +10,8 @@
 #import "cocos2d.h"
 #import <math.h>
 
+#define RADIUS 20 // just a placeholder value can be changed later
+
 
 @interface Cell : NSObject {
     
@@ -29,6 +31,8 @@
 - (void) emit_virions: (NSMutableArray *) cells;
 // iterate through an array of all cells in the game
 // and 
+
+- (void) cell_motion;
 
 
 @property (nonatomic) BOOL infected;
