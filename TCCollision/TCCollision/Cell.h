@@ -23,6 +23,7 @@
     CGPoint cur_pos;
     int replication_time; // 5 - 15 seconds 
     CCSprite *cell_sprite;
+    // possibly need to add a var to tell whether a cell is dead and should not be displayed
     
 }
 -(float) distance_from_cell: (Cell *) cell;

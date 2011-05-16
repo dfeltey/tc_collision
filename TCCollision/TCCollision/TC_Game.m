@@ -77,6 +77,53 @@
     return self;
 }
 
+
+- (BOOL) cell_in_threshold:(CGPoint)p
+{
+    BOOL val = NO;
+    
+    for (int i =0; i<self.num_remaining; i++) {
+        Cell *cur = [self.cells objectAtIndex:i];
+        float distance = sqrtf(powf(cur.bind_pos.x-p.x,2)+powf(cur.bind_pos.y-p.y,2));
+        
+        if (distance <= THRESHOLD) {
+            val = YES;
+            break;
+        }
+    }
+    
+    return val;
+}
+/*
+- (id) nearest_cell:(CGPoint)p
+{
+    for (int i = 0; i< self.num_remaining; i++) {
+        Cell *cur = [self.cells objectAtIndex:i];
+        float distance = sqrtf(powf(cur.bind_pos.x-p.x,2)+powf(cur.bind_pos.y-p.y,2));
+        
+        if (distance <= THRESHOLD) {
+            <#statements#>
+        }
+        
+    }
+}*/
+// Above is basic idea to return the nearest cell to a touch
+// iterate through all cells in game
+// return the last(/first?) nearest one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // dealloc
 
 
