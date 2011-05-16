@@ -123,6 +123,7 @@
 		097C68E3137C23D80079DAF7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C68E2137C23D80079DAF7 /* RootViewController.m */; };
 		097C68E6137C23D80079DAF7 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C68E5137C23D80079DAF7 /* HelloWorldLayer.m */; };
 		097C68EF137C24310079DAF7 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C68EE137C24310079DAF7 /* Cell.m */; };
+		097D803A1380913F00AFA8F9 /* TC_Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 097D80391380913F00AFA8F9 /* TC_Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -363,6 +364,8 @@
 		097C68E7137C23D80079DAF7 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		097C68ED137C24310079DAF7 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		097C68EE137C24310079DAF7 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		097D80381380913F00AFA8F9 /* TC_Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TC_Game.h; sourceTree = "<group>"; };
+		097D80391380913F00AFA8F9 /* TC_Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TC_Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +435,8 @@
 				097C68E7137C23D80079DAF7 /* GameConfig.h */,
 				097C68ED137C24310079DAF7 /* Cell.h */,
 				097C68EE137C24310079DAF7 /* Cell.m */,
+				097D80381380913F00AFA8F9 /* TC_Game.h */,
+				097D80391380913F00AFA8F9 /* TC_Game.m */,
 				097C6794137C23D60079DAF7 /* Resources */,
 				097C67A8137C23D60079DAF7 /* cocos2d */,
 				097C689A137C23D70079DAF7 /* CocosDenshion */,
@@ -875,6 +880,7 @@
 				097C68E3137C23D80079DAF7 /* RootViewController.m in Sources */,
 				097C68E6137C23D80079DAF7 /* HelloWorldLayer.m in Sources */,
 				097C68EF137C24310079DAF7 /* Cell.m in Sources */,
+				097D803A1380913F00AFA8F9 /* TC_Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +974,7 @@
 				097C68EC137C23D80079DAF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

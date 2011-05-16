@@ -51,6 +51,9 @@
     self.cur_pos = ccp(x,y); 
 }
 
+
+// dealloc
+
 @end
 
 
