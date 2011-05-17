@@ -20,7 +20,7 @@
     BOOL emitted;
     int infection_prob; // random number between 0-2
     CGPoint bind_pos;
-    CGPoint cur_pos; // rename to dest 
+    CGPoint dest_pos; // rename to dest 
     int replication_time; // 5 - 15 seconds 
    // CCSprite *cell_sprite;
     // possibly need to add a var to tell whether a cell is dead and should not be displayed

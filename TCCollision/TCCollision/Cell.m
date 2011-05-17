@@ -10,7 +10,7 @@
 
 
 @implementation Cell
-@synthesize infected,emitted,infection_prob,bind_pos,cur_pos,replication_time,cell_sprite;
+@synthesize infected,emitted,infection_prob,bind_pos,dest_pos,replication_time,cell_sprite;
 
 
 -(id) init 
@@ -20,7 +20,7 @@
     self.emitted = NO;
     self.infection_prob = arc4random()%3;
     self.bind_pos = ccp(0,0);
-    self.cur_pos = ccp(0,0);
+    self.dest_pos = ccp(0,0);
     self.replication_time = 0;
     
     // self.cell_sprite = 
@@ -48,7 +48,7 @@
     float x = self.bind_pos.x + (arc4random()%(2*RADIUS) - RADIUS);
     float y = self.bind_pos.y + (arc4random()%(2*RADIUS) - RADIUS);
     
-    self.cur_pos = ccp(x,y); 
+    self.dest_pos = ccp(x,y); 
 }
 
 
