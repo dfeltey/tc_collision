@@ -15,7 +15,7 @@
 #define INFECTED_INIT 3 // temp, can add for different levels etc...
 #define X_DIM   480
 #define Y_DIM   320
-#define THRESHOLD 20 // temp val
+#define THRESHOLD 20// temp val
 
 
 @interface TC_Game : NSObject {
@@ -27,9 +27,16 @@
     
 }
 
+- (void) kill_cell: (Cell *) cell;
+// update remaining
+// release cell
+// if infected subtract from num_infected
+
 - (BOOL) cell_in_threshold: (CGPoint) p;
 
 - (id) nearest_cell: (CGPoint) p;
+
+- (NSMutableArray *) cells_near_point: (CGPoint) p; // dist=45
 
 @property (nonatomic, retain) NSMutableArray *cells;
 @property (nonatomic) int num_infected;

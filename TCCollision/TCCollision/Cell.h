@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import <math.h>
 
-#define RADIUS 20 // just a placeholder value can be changed later
+#define RADIUS 5 // just a placeholder value can be changed later
 
 
 @interface Cell : NSObject {
@@ -20,9 +20,9 @@
     BOOL emitted;
     int infection_prob; // random number between 0-2
     CGPoint bind_pos;
-    CGPoint cur_pos;
+    CGPoint cur_pos; // rename to dest 
     int replication_time; // 5 - 15 seconds 
-    CCSprite *cell_sprite;
+   // CCSprite *cell_sprite;
     // possibly need to add a var to tell whether a cell is dead and should not be displayed
     
 }
