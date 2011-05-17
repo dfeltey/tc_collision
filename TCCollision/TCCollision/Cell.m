@@ -10,7 +10,7 @@
 
 
 @implementation Cell
-@synthesize infected,emitted,infection_prob,bind_pos,dest_pos,replication_time,cell_sprite;
+@synthesize infected,emitted,infection_prob,bind_pos,dest_pos,replication_time; //cell_sprite;
 
 
 -(id) init 

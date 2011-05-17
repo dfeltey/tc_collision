@@ -40,8 +40,8 @@
 @property (nonatomic) BOOL emitted;
 @property (nonatomic) int infection_prob;
 @property (nonatomic) CGPoint bind_pos;
-@property (nonatomic) CGPoint cur_pos;
+@property (nonatomic) CGPoint dest_pos;
 @property (nonatomic) int replication_time;
-@property (nonatomic, retain) CCSprite *cell_sprite;
+//@property (nonatomic, retain) CCSprite *cell_sprite;
 
 @end
