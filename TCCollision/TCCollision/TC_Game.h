@@ -27,7 +27,7 @@
     
 }
 
-- (BOOL) cell_in_radius: (CGPoint) p;
+- (BOOL) cell_in_threshold: (CGPoint) p;
 
 - (id) nearest_cell: (CGPoint) p;
 
