@@ -135,15 +135,18 @@
 
 
 
-
-
-
-
-
-
-
-
 // dealloc
+
+
+
+
+
+- (void) dealloc
+{
+    [self.cells release];
+    [super dealloc];
+    
+}
 
 
 @end

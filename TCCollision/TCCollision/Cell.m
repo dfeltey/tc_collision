@@ -53,6 +53,10 @@
 
 
 // dealloc
+-(void) dealloc
+{
+    [super dealloc];
+}
 
 @end
 
