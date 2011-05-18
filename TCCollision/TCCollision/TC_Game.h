@@ -23,6 +23,7 @@
     
     
     NSMutableArray *cells;
+    NSMutableArray *cur_infected;
     int num_infected;
     int num_remaining;
     
@@ -40,6 +41,7 @@
 - (NSMutableArray *) cells_near_point: (CGPoint) p; // dist=45
 
 @property (nonatomic, retain) NSMutableArray *cells;
+@property (nonatomic, retain) NSMutableArray *cur_infected;
 @property (nonatomic) int num_infected;
 @property (nonatomic) int num_remaining;
 

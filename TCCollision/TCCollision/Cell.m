@@ -15,6 +15,9 @@
 
 -(id) init 
 {
+    self = [super init];
+    if(self)
+    {
     
     self.infected = NO;
     self.emitted = NO;
@@ -24,7 +27,7 @@
     self.replication_time = 0;
     
     // self.cell_sprite = 
-    
+    }
     return self;
     
 }
