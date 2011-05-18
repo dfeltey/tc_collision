@@ -16,6 +16,7 @@
 #define X_DIM   480
 #define Y_DIM   320
 #define THRESHOLD 20// temp val
+#define CK_RAD 45 // temp
 
 
 @interface TC_Game : NSObject {
@@ -32,9 +33,9 @@
 // release cell
 // if infected subtract from num_infected
 
-- (BOOL) cell_in_threshold: (CGPoint) p;
+- (void) spread_infection: (Cell *) cell;
 
-- (id) nearest_cell: (CGPoint) p;
+
 
 - (NSMutableArray *) cells_near_point: (CGPoint) p; // dist=45
 

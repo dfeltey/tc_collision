@@ -70,6 +70,7 @@
         
         if ( !(current.infected)) {
             current.infected = YES;
+            current.replication_time = (arc4random()%11+5);
             j++;
         }
     }
@@ -78,39 +79,57 @@
 }
 
 
-- (BOOL) cell_in_threshold:(CGPoint)p
+- (NSMutableArray *) cells_near_point:(CGPoint)p
 {
-    BOOL val = NO;
     
-    for (int i =0; i<self.num_remaining; i++) {
-        Cell *cur = [self.cells objectAtIndex:i];
-        float distance = sqrtf(powf(cur.bind_pos.x-p.x,2)+powf(cur.bind_pos.y-p.y,2));
+    NSMutableArray *near_cells = [[NSMutableArray alloc] init ];
+    
+    for (Cell *cell in self.cells)
+    {
+        float distance;
+        float x = p.x - cell.bind_pos.x;
+        float y = p.y - cell.bind_pos.y;
+        distance = sqrtf(powf(x, 2)+powf(y, 2));
         
-        if (distance <= THRESHOLD) {
-            val = YES;
-            break;
+        if (distance <= CK_RAD ) {
+            [near_cells addObject:cell];
         }
+        
     }
     
-    return val;
+    return near_cells;
 }
-/*
-- (id) nearest_cell:(CGPoint)p
-{
-    for (int i = 0; i< self.num_remaining; i++) {
-        Cell *cur = [self.cells objectAtIndex:i];
-        float distance = sqrtf(powf(cur.bind_pos.x-p.x,2)+powf(cur.bind_pos.y-p.y,2));
-        
-        if (distance <= THRESHOLD) {
-            <#statements#>
-        }
-        
-    }
-}*/
-// Above is basic idea to return the nearest cell to a touch
-// iterate through all cells in game
-// return the last(/first?) nearest one
 
+- (void) kill_cell:(Cell *)cell
+{
+    self.num_remaining--;
+    if (cell.infected) {
+        self.num_infected--;
+    }
+    
+    [self.cells removeObject:cell];
+    [cell release];
+}
+
+
+-(void) spread_infection: (Cell *) cell
+{
+    NSMutableArray *near_cells = [self cells_near_point:cell.bind_pos];
+    
+    for (Cell *cell in near_cells) {
+        if (!cell.infected) {
+            if ( (arc4random()%3) <= cell.infection_prob  ) {
+                cell.infected = YES;
+                cell.replication_time = (arc4random()%11+5);
+
+            }
+        }
+    }
+    
+    
+    [near_cells release];
+    
+}
 
 
 
