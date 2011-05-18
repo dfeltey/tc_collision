@@ -11,7 +11,7 @@
 #import <math.h>
 #import "Cell.h"
 
-#define NUM_INIT 70 // temp value, can change later
+#define NUM_INIT 40 // temp value, can change later
 #define INFECTED_INIT 3 // temp, can add for different levels etc...
 #define X_DIM   480
 #define Y_DIM   320

@@ -84,6 +84,7 @@
     
     NSMutableArray *near_cells = [[NSMutableArray alloc] init ];
     
+    
     for (Cell *cell in self.cells)
     {
         float distance;
@@ -96,7 +97,7 @@
         }
         
     }
-    
+    [near_cells autorelease];
     return near_cells;
 }
 
